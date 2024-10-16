@@ -1,0 +1,125 @@
+/* Center the content properly */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("/static/wallpaper.jpg");
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack content vertically */
+    height: 100vh;
+}
+
+/* Header section with space between the welcome message and the brand */
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.welcome, .brand {
+    color: white;
+}
+
+/* Inline block for balance and text */
+.inline-block {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: left;
+    width: 90%; /* Adjusted for mobile responsiveness */
+    max-width: 300px; /* Ensures it doesn't stretch too wide */
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+.inline-block h1 {
+    font-size: 36px;
+    color: #333;
+    margin: 0;
+}
+
+.inline-block p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Buttons styled properly side by side */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Use full screen width */
+    max-width: 600px; /* Adjusted to allow side by side */
+    margin-top: 20px;
+}
+
+.button {
+    text-align: center;
+    flex-grow: 1; /* Each button takes equal space */
+    margin: 0 5px; /* Space between buttons */
+}
+
+.button a {
+    text-align: center;
+    display: block;
+    color: white; /* Ensure text color is visible */
+    text-decoration: none;
+}
+
+.button img {
+    width: 60px; /* Reduce button size */
+    height: 60px;
+    border-radius: 10px;
+}
+
+.button p {
+    margin-top: 5px;
+    color: #666;
+    font-weight: bold;
+    font-size: 12px; /* Smaller button label size */
+}
+
+/* Logout button at bottom */
+.logout-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff0000;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logout-btn:hover {
+    background-color: #cc0000;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 600px) {
+    .inline-block {
+        width: 90%;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Stack buttons vertically on small screens */
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button {
+        margin-bottom: 10px;
+    }
+}

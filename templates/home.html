@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FundIT Wallet</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <div class="welcome">
+            <h2>Welcome, {{ user['username'] }}</h2>
+        </div>
+        <div class="brand">
+            <h2>FUNDIT</h2>
+        </div>
+    </header>
+
+    <!-- Balance display and information -->
+    <div class="inline-block balance">
+        <h1>NGN {{ user['balance'] }}</h1>
+        <p>Pay - Be Paid - Secured</p>
+    </div>
+
+    <!-- Button section for actions -->
+    <div class="buttons">
+        <div class="button">
+            <a href="/send/{{ user['username'] }}">
+                <img src="/static/send-button.jpg" alt="Send">
+                <p>Send</p>
+            </a>
+        </div>
+        <div class="button">
+            <a href="/receive/{{ user['username'] }}">
+                <img src="/static/receive-button.jpg" alt="Receive">
+                <p>Receive</p>
+            </a>
+        </div>
+        <div class="button">
+            <a href="/addfunds/{{ user['username'] }}">
+                <img src="/static/addfunds-button.jpg" alt="Add Funds">
+                <p>Add Funds</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- Logout button at the bottom right -->
+    <a href="/logout" class="logout-btn">Logout</a>
+</body>
+</html>
